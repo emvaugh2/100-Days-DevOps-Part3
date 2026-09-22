@@ -30,7 +30,11 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 24: Git Create Branches
 
+Last one for the day. We need to create a branch from the master branch. That's it that's all. Why is branching important? Might as well ask that while we're here. Branching is the same as forking except think about if this was internal to our organization. Yes, we have permissions to push this code to our overall repo but this also allows us to make changes, the senior engineer can review those changes during a pull request, and then merge or deny the request as they see fit. The branch is where we make our code changes without affecting the main repo and then we merge the branch with the main repo once it's approved. 
 
+I ran into the fatal: detected dubious ownership message again. The CLI wanted me to run the given command to bypass this. Once I did that, I used `git status` and `ls -la` to check if this I was in the repo ( the .git file confirms this ) and it showed me that I was in the branch kodekloud_official. I believe I need to be on the master branch. Use the `git switch master` command to switch to the main branch. Now use the the `git branch xfusioncorp_official` command to make a branch from the master branch. Your branch should have the same files under it as the master branch. 
+
+Lab completed. We'll go over the underlying concept here. Creating a branch doesn't make a copy of the files. Apparently it changes the pointers of the commit or something. My brain is tired. We'll revisit this. 
 
 ## Day 23: Fork a Git Repository
 
