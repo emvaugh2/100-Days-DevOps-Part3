@@ -42,4 +42,12 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 21: Set Up Git Repository on Storage Server
 
+Okay here's our first Git lab! We need to create a Git repository (repo) on the Storage server. We first need to install git and then create a bare repo named `/opt/apps.git/`. 
 
+We'll use `sudo dnf install git -y` to install Git. As far as creating a repo, I'll use the man pages to see how to do that. Usually I create the repo in GitHub first and then push to it. Apparently the man pages were not installed so I had to install the package `man-db`. Going to update it using `sudo mandb` just in case. There's a ton of information in these man pages. I used `man -k init` to get a specific man page on git-init since that was the closest command I could see in the man pages regarding creating a new repo. 
+
+I used `sudo git init /opt/apps.git` to create the new repo and used ls -l to check if the repo was created. You can also use `git status` apparently to check if the repo was created. 
+
+Update: I failed the lab. Apparently it has to be a bare repo. Lets make that happen. Apparently for a bare repo, you need to inlcude the --bare flag so I ran `git init --bare /opt/apps.git`. 
+
+That worked! Now, I don't know the difference between a bare repo and a normal repo but we'll figure that out later. 
