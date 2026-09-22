@@ -34,11 +34,17 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 23: Fork a Git Repository
 
+Okay we're back! Before we get into the lab, lets figure out what forking is. When you fork a repo, you're creating your own independent copy of the repo. This is different from clone because with clone, you're creating a local working copy of the repo. The fork copy is an entirely new repo that you own. For example, say you're looking at a Microsoft repo. They're obviously not going to let the general public push changes to this repo. If you do git clone, the cloned repo you get is not yours. It's Microsofts. So if you push to it, you'll be denied because you don't have the permissions for it. If you fork the repo, you create your own version of the repo that will most likely go to your own GitHub account. Now, you can make changes and push to it because you own it. 
 
+So for this lab, we needed to log into a fake GitHub account as a user Jon and then fork Sarah's repo. The fork button is located by the Star button to the upper right corner. Once you follow the prompt, the repo should now be located under your user (Jon) as well. 
+
+I pressed submit and got the green check. Nice. Lets keep it rolling. 
 
 ## Day 22: Clone Git Repository on Storage Server
 
+For this lab, we need to close a repository (repo) from one location to another location. I'm used to using URLs for the `git clone` command but I think I can figure out how to use it for local repos as well. My thought process is switch to the /usr/src/kodekloudrepos directory and then use the git clone command with the file path of the repo we're trying to close. 
 
+That worked! Very easy. 
 
 ## Day 21: Set Up Git Repository on Storage Server
 
