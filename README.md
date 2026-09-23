@@ -26,10 +26,26 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 25: Git Merge Branches
 
+Okay here's the scenario. We have a repo located at `/opt/demo.git` and a clone of this repo in `/usr/src/kodekloudrepos` on the storage server (ststor01). We need to create a branch called xfusion from the clone repo and then copy the `/tmp/index.html` file on the storage server into the repo. Then, we need to add/commit this file in the new branch and merge back that branch into the master branch. Finally, we need to push the changes to the origin for both of the branches. 
 
+Now, I've never worked with local repos before and while I've done the git init, commit, clone, and push commands for working with my GitHub, I'm not too familiar with this process of merging branches and pushing to local repos. I'm going to ask AI for some help here. This may be more of a "get it under your fingers" lab experience than me doing it from my own knowledge. 
+
+So initially I would go to the /demo/ directory so I did that and saw some hidden files using `ls -la`. I used git branch to make sure I was on the master branch which I was. I then used git branch xfusion to create my branch from the master branch. I'm going to use AI from here on out and find out why each part works. Next, we used the copy command to move the index file over to our branch so `cp /tmp/index.html .`. We used git status to see if there were any changes that needed to be made. Git automatically found the index.html file was untracked so this is a great verification check. 
+
+To add the file, use `git add index.html`. I used another git status and it says we now have changes to be committed. I think this is where I can commit it and make a comment. I went ahead and ran `git commit -m "Added index.html"`. Now, lets switch back to the master branch and use `git merge xfusion` to merge the branches together. After that, you can use `ls -l` and you should be able to see the newly added index.html file! You can also use `git log` to see the changes you've made. 
+
+We still need to push the changes to the origin from both branches (master and xfusion) so first, lets figure out what our origin is. Use `git remote -v` which should show the output of `/opt/demo.git`. Now use the `git push origin master` and `git push origin xfusion` commands to push both branches. You should see the changes getting passed to the origin. 
+
+Thats it for this lab!
+
+Personal Notes:
+- Learning moment for me here. Im trying to conceptualize each part of what we did. Okay we can think of Git as having three areas: a working directory, a staging area and a repo. In the working directory, you're editing your files. Git sees the file but doesn't track it. When you do `git add`, you move your file into the staging area and Git tracks it. This is the same as you editing a policy in the FMC and saving the change. Your change is now staged to be deployed. To actually deploy your change like in the FMC, in Git, you have to use `git commit`. The -m flag is for leaving a commit in which you use quotation marks. But this isn't exactly the same as a deployment into prod. Think of git commit as you're saving this verion of the branch.
+- When you merge a branch into the master branch, you're bringing the changes your made in the branch into the master branch. So all new files and edited files will now appear in the master branch. This is more like the FMC deployment.
+- Lastly, the push to origin part is more like this. When you clone a repo, you're getting a local copy that you can work with and make changes to. If you want those changes on your clone repo to appear in the prod repo, you have to push those changes to the original (origin) repo. That's where `git push origin master` comes from.
+
+So in summary, you have your working directory. You make your changes. You add those changes so those files we be tracked. You then commit those changes to that side branch. You think merge that branch with the master branch for your locally cloned repo. Lastly, you push the changes from your local repo to your prod (remote or origin) repo. 
 
 ## Day 24: Git Create Branches
-
 Last one for the day. We need to create a branch from the master branch. That's it that's all. Why is branching important? Might as well ask that while we're here. Branching is the same as forking except think about if this was internal to our organization. Yes, we have permissions to push this code to our overall repo but this also allows us to make changes, the senior engineer can review those changes during a pull request, and then merge or deny the request as they see fit. The branch is where we make our code changes without affecting the main repo and then we merge the branch with the main repo once it's approved. 
 
 I ran into the fatal: detected dubious ownership message again. The CLI wanted me to run the given command to bypass this. Once I did that, I used `git status` and `ls -la` to check if this I was in the repo ( the .git file confirms this ) and it showed me that I was in the branch kodekloud_official. I believe I need to be on the master branch. Use the `git switch master` command to switch to the main branch. Now use the the `git branch xfusioncorp_official` command to make a branch from the master branch. Your branch should have the same files under it as the master branch. 
