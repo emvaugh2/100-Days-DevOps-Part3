@@ -22,7 +22,15 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 26: Git Manage Remotes
 
+For this lab, we need to create a new git remote called dev_news and point it to /opt/xfusioncorp_news.git . Then, we need to copy a file into our master branch, add, commit, and push it to the right remote repo. Now, I'm going to use AI for the first part because origianlly, we're in `/opt/news.git` for the remote repo and we're in `/usr/src/kodekloudrepos/news` for our locally cloned repo. I'm getting a little confused on the remote and locally cloned part so I want to make sure I'm doing that properly. 
 
+Okay first, a remote is a nickname that points to another Git repo. It is not another clone and no additional directories get created. It's just a pointer. Think of it as a saved push/pull destination. Another analogy was say you have your mom's number and your dad's number. You can tell the phone to send this message to your mom and then the phone will find your mom (remote), then find her number (the destination repo), and send her a message (your add and commit). It's just a pointer. It's no data or anything. You're just allowed to use the nickname of it to push your changes somewhere. 
+
+I'll have to let that sink in. Lets get started. I used the man pages to see how to use the `git-remote` command. I followed the example and entered `git remote add dev_news /opt/xfusioncorp_news.git`. For verification, I ran git remote -v and it showed the new remote repo. I then copied the file to the current directory. git status showed that there are some untracked files so I'm going to add and commit them now. First, I did `git add index.html`. Then I ran `git commit -m "Adding the index.html file for deployment"`. Another git status verification check shows there's nothing to commit. Lets push these changes. Since we didn't create any branches and we've been working on the master branch, I ran `git push dev_news master`. 
+
+Everything worked! Okay this made a little more sense. I guess the remotes and pointers just allows you to have a little more granularity and flexibilty when it comes to making changes. Once again, the understanding of the lab took longer than actually doing it. I kind of did the lab myself. Just used the man pages for examples. 
+
+On to the next. 
 
 ## Day 25: Git Merge Branches
 
