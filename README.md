@@ -18,7 +18,16 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 27: Git Revert Some Changes
 
+Okay we need to remove the last commit we did. I've never done this before so I'm going to look at the man pages. 
 
+UPDATE: I asked AI to help me understand the question. I didn't know what the lab was really even asking me. SO the point of this lab is to use the `git revert` command. This is not the same as remove or reset. The revert command basically just reverses a commit from your history. You can see your history commits using `git log`. So if you have 2 commits and say you want to reverse the changes of the second commit, using `git revert <commit_name>` is like adding a THIRD commit but the only action done by this third commit is reversing the actions of the second commit. 
+
+So your first commit will be there but after the revert, you'll have 3 commits but only the effects of the first one. I would assume this is more for like, accounting all actions. Instead of just erasing a mistake, it can still be documented by the effects done by the mistake are reversed. Here were the only two commands for this lab:
+- git revert --no-commit HEAD
+- git commit -m "revert apps"
+
+
+This was really easy if you knew what to do. Learning experience for me again. 
 
 ## Day 26: Git Manage Remotes
 
