@@ -10,6 +10,17 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 29: Manage Git Pull Requests
 
+Now, we finally get to pull requests. What's a pull request? It's basically just a code review before you actually merge your changes. This is a way for you and someone else on your team to overlook your work to make sure it works. Team work makes the dream work. Lets get started. 
+
+We'll first log into the storage server as user max and we have a cloned repo under our home directory for this user. Max has already pushed his story to remote git repository hosted on Gitea branch story/fox-and-grapes. We need to make sure we see Sarah's story and history of commits by running git log. Validate this author's information. 
+
+We need to create a pull request to merge Max's story/fox-and-grapes branch into the master. We'll use the user tom as the PR review. We need to assign him as the reviewer. We'll do this using the Git Portal UI. 
+
+Okay lets get started. I just noticed you can see the Author of the commits on the `git log` page. Never noticed that. So the changes were already committed and pushed to GitHub. I had to make a new PR request based on this push. Once I did that, if you just got to the PR itself, you'll see on the right hand side you can assign a reviewer. I assigned this to Tom. I logged in as Tom and clicked on my PR notification. I made a comment and clicked git merge. Then I merged the request. That completed the lab.
+
+This wasn't a hard lab but moreso I didn't feel very sure about what I was looking at exactly. It wasn't very clearly stated where to assign reviewers, what constitutes a review, how to actually merge it on the reviewers side, etc. I'll sort out the visuals with AI but I was able to complete this by myself. 
+
+Personal Notes:
 
 
 ## Day 28: Git Cherry Pick
