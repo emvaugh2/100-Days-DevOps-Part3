@@ -14,7 +14,11 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 28: Git Cherry Pick
 
+What is git cherry pick? It's exactly what it sounds like. You can pick and choose specific git commits to merge into your master branch instead of committing all the changes that you made. I wasn't aware of this concept so lets give it a try. 
 
+So the command was `git cherry-pick <hash>` which I was able to make this out. I asked Google to make sure my command looked good. The part that AI had to help me out with was the workflow. I needed to switch to the master branch first. Then run my cherry pick command for the specific commit I wanted. Lastly, I had to push my changes using `git push origin master`. I feel like I'm going to forget the order of that soon enough but hey. 
+
+That completed the lab! Pretty easy. 
 
 ## Day 27: Git Revert Some Changes
 
