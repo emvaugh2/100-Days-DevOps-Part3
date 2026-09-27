@@ -6,7 +6,7 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 30: Git hard reset
 
-
+Lets get it done! But tomorrow. 
 
 ## Day 29: Manage Git Pull Requests
 
