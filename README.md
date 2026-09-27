@@ -8,6 +8,8 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 Lets get it done! But tomorrow. 
 
+Today's the day. 
+
 ## Day 29: Manage Git Pull Requests
 
 Now, we finally get to pull requests. What's a pull request? It's basically just a code review before you actually merge your changes. This is a way for you and someone else on your team to overlook your work to make sure it works. Team work makes the dream work. Lets get started. 
