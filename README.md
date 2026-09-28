@@ -6,9 +6,11 @@ Greetings! Welcome back. We'll stick with this formatting right now for our chal
 
 ## Day 30: Git hard reset
 
-Lets get it done! But tomorrow. 
+Okay git hard reset. What is this and why is it needed. With git revert, you're basically adding on more commits but you're removing the effects of the previous commits. With git hard reset, you're removing all the commits and going back to an earlier commit. Say you have 12 commits and you do git hard reset to HEAD~4. You'll go back commit 8 with no recollection of commits 9, 10, 11, and 12. It's like saving a game at a checkpoint and then restarting. You'll just go back to the check point but the game wont remember everything you did after that check point. 
 
-Today's the day. 
+Okay lets do this lab. This was pretty easy. I used `git log` to see all the commits. There were about 10 commits in front of the commit I wanted to point the HEAD to so I did `git reset --hard HEAD~9` or something similar to point it to the right commit. I ran into some issues after running `git push origin master`. It wasn't accepting the push since I believe it said the push was non-fast-forward. I ended up using the --force flag to bypass this but I received another error. AI helped me determine that I needed to use sudo for this since the remote repo was owned by root and technically I was pushing as natasha. Simple error. This concluded the lab!
+
+Personal Note: HEAD is where the current commits are now. Say you have 12 commits. HEAD would be the 12th commit. It's the latest commit on your current branch. You use HEAD~# to go back that number of commits. If you have 12 commits and you do HEAD~2, you'll go back to the 10th commit since you were at 12, then you go to 11 (HEAD~1) and then 10 for HEAD~2. Also, I may need to go over the fast-forward terminology. 
 
 ## Day 29: Manage Git Pull Requests
 
